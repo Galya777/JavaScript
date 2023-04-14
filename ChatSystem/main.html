@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Messages</title>
+    <script type="module" src="code.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="screenHeader">
+      <h1>MyChat</h1>
+      <div>
+      <button id="plusButton" class="openSearchingGroups"><i class="fas fa-plus"></i></button>
+      <button id="inboxButton" class="openGroupList"><i class="fas fa-inbox"></i></button>
+      <button id ="requestsButton" class="openGroupList"><i class="fas fa-comment-medical"></i></button>
+      <button id ="notificationsButton" class="openGroupList"><i class="fas fa-bell"></i></i></button>
+      </div>
+    </header>
+    <main>
+      <article class="groupChat displayedChat">
+        <header class="chatHeader">
+          <p class="currentChatName" id="chatName" >General</p>
+          <div>
+          <button id="leaveChat">Leave chat</button>
+          <button id="addPeople"><i class="fas fa-user-plus"></i></button>
+          </div>
+        </header>
+        <section id="messageWindow" class="messages">
+          <ul id="messageUl">
+          </ul>
+        </section>
+        <div class="sendMessage">
+          <input
+            type="text"
+            class="newMessage"
+            id = "messageInput"
+            placeholder="Type something..."
+          />
+        </div>
+      </article>
+    </main>
+    <section id ="listWrapper" class="hidden">
+      <button id="exitGroupList" class="exit"><i class="fas fa-times"></i></button>
+      <p class="groupList">Your groups</p>
+      <nav class="group-chats">
+        <ul id= "groupListUl">
+        </ul>
+      </nav>
+    </section>
+    <section id= "newGroup" class="addGroup hidden">
+      <button id="exitNewGroup" class="exit"><i class="fas fa-times"></i></button>
+      <p class="title">MyChat</p>
+      <div class="createNewGroup">
+      <p class="create">Create a new group</p>
+      <input id="newGroupName" type="text" placeholder="Enter the name of the group" />
+      <button id="submitCreatedGroup" class="float-right">Submit</button>
+      </div>
+      <div class="findANewGroup">
+        <p class="find">Find a new group</p>
+        <input id="searchedGroupName" type="text" placeholder="Enter the name of the group" />
+        <button id="searchForNewGroup" class="float-right">Search</button>
+      </div>
+    </section>
+    <section id= "newPerson" class="addPerson hidden">
+      <button id="exitNewPerson" class="exit"><i class="fas fa-times"></i></button>
+      <p class="title">MyChat</p>
+      <div class="findNewPerson">
+      <p class="find">Add a person to this chat room</p>
+      <input id="newPersonName" type="text" placeholder="Enter the username of the person" />
+      <button id="submitPerson" class="float-right">Submit</button>
+      </div>
+    </section>
+    <section  id= "requestSection" class="requests hidden">
+      <button id="exitNewRequests" class="exit"><i class="fas fa-times"></i></button>
+      <p class="title">MyChat</p>
+      <p class="question">Do you want to join this groups?</p>
+        <ul class="requestsUl" id="requestsUl">
+        </ul>            
+    </section>
+    <section class="changeMessage hidden" id="changeMessageSection">
+      <button id="exitUpdateMessage" class="exit"><i class="fas fa-times"></i></button>
+      <p>Change your message from here</p>
+      <input
+            type="text"
+            class="newMessage"
+            id = "changeMessageInput"
+            placeholder="Type something..."
+          />
+          <button id="submitUpdatedMessage" class="float-right">Submit</button>
+    </section>
+    <section id ="notificationWrapper" class="hidden">
+      <button id="exitNotificationList" class="exit"><i class="fas fa-times"></i></button>
+      <p class="goupList">You have unread messages in: </p>
+      <nav class="notifications">
+        <ul id= "notificationListUl">
+        </ul>
+      </nav>
+    </section>
+  </body>
+</html>
